@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dr. Suresh Eye Clinic & Opticals</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/fav.jpg' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-12 left-item">
+              <ul>
+                <li>
+                  <i class="fas fa-envelope-square"></i> sales@smarteyeapps.com
+                </li>
+                <li><i class="fas fa-phone-square"></i> +123 987 887 765</li>
+              </ul>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block right-item">
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="nav-head" class="header-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-12 nav-img">
+              <img src="{% static 'images/logo.jpg' %}" alt="" />
+              <a data-toggle="collapse" data-target="#menu" href="#menu"
+                ><i class="fas d-block d-md-none small-menu fa-bars"></i
+              ></a>
+            </div>
+            <div id="menu" class="col-md-9 d-none d-md-block nav-item">
+              <ul>
+                <li><a href="home' ">Home</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'test' %}">Test</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-nav no-margin row">
+      <div class="container">
+        <div class="row">
+          <h2>About Dil Homeopathy Clinic</h2>
+          <ul>
+            <li>
+            </li>
+            <li><i class="fas fa-angle-double-right"></i> Services</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="key-features kf-2">
+      <div class="container">
+        <div class="inner-title">
+          <h2>Our Key Features</h2>
+          <p>Take a look at some of our key features</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="single-key">
+              <i class="fas fa-hospital-alt"></i>
+              <h5>Newest Technologies</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ut erat nec leo lobortis blandit.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-key">
+              <i class="fas fa-user-md"></i>
+              <h5>Experienced Doctors</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ut erat nec leo lobortis blandit.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-key">
+              <i class="fas fa-briefcase-medical"></i>
+              <h5>High Customer Satisfaction</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ut erat nec leo lobortis blandit.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-key">
+              <i class="fas fa-capsules"></i>
+              <h5>Pharma Pipeline</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ut erat nec leo lobortis blandit.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-key">
+              <i class="fas fa-prescription-bottle-alt"></i>
+              <h5>Pharma Team</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ut erat nec leo lobortis blandit.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-key">
+              <i class="far fa-thumbs-up"></i>
+              <h5>High Quality Treatments</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ut erat nec leo lobortis blandit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <h2>About Us</h2>
+            <p>
+              Smart Eye is a leading provider of information technology,
+              consulting, and business process services. Our dedicated employees
+              offer strategic insights, technological expertise, and industry
+              experience.
+            </p>
+            <p>
+              We focus on technologies that promise to reduce costs, streamline
+              processes, and speed time-to-market, backed by our strong quality
+              processes and rich experience managing global projects.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h2>Useful Links</h2>
+            <ul class="list-unstyled link-list">
+              <li>
+                <a href="{% url 'about_us' %}">About us</a
+                ><i class="fa fa-angle-right"></i>
+              </li>
+          </div>
+          <div class="col-md-4 col-sm-12 map-img">
+            <h2>Contact Us</h2>
+            <address class="md-margin-bottom-40">
+              BlueDart <br />
+              Marthandam (K.K District) <br />
+              Tamil Nadu, IND <br />
+              Phone: +91 9159669599 <br />
+              Email: <a href="mailto:info@anybiz.com">info@bluedart.in</a><br />
+              Web: <a href="http://www.bluedart.in">www.bluedart.in</a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copy">
+      <div class="container">
+        <a href="https://www.smarteyeapps.com/"
+          >2015 &copy; All Rights Reserved | Designed and Developed by
+          Smarteyeapps</a
+        >
+        <span>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </span>
+      </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

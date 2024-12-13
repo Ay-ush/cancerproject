@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Breast Cancer Detection Test</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/fav.jpg' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-12 left-item">
+              <ul>
+                <li>
+                  <i class="fas fa-envelope-square"></i> sales@smarteyeapps.com
+                </li>
+                <li><i class="fas fa-phone-square"></i> +123 987 887 765</li>
+              </ul>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block right-item">
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="nav-head" class="header-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-12 nav-img">
+              <img src="{% static 'images/logo.jpg' %}" alt="" />
+              <a data-toggle="collapse" data-target="#menu" href="#menu"
+                ><i class="fas d-block d-md-none small-menu fa-bars"></i
+              ></a>
+            </div>
+            <div id="menu" class="col-md-9 d-none d-md-block nav-item">
+              <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'test' %}">Test</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ################# Page Title Starts Here ####################### -->
+    <div class="page-nav no-margin row">
+      <div class="container">
+        <div class="row">
+          <h2>Breast Cancer Detection Test</h2>
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ######## Page Title End ####### -->
+
+    <div class="container mt-5">
+      <h1 class="text-center">Upload an Image for Breast Cancer Detection</h1>
+      <form method="post" enctype="multipart/form-data" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="file">Upload Image</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="file"
+            name="file"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-md btn-block">
+          Submit
+        </button>
+      </form>
+      {% if label_CM and label_RN %}
+      <div class="row mt-4">
+        <div class="col-md-6 text-center">
+          <h2>CM Model Result</h2>
+          <h3>{{ label_CM }}</h3>
+        </div>
+        <div class="col-md-6 text-center">
+          <h2>RN Model Result</h2>
+          <h3>{{ label_RN }}</h3>
+        </div>
+      </div>
+      {% elif error %}
+      <div class="alert alert-danger mt-5">
+        <strong>Error:</strong> {{ error }}
+      </div>
+      {% endif %}
+      <div class="text-center mt-4">
+        <img
+          src="{{ uploaded_file_url }}"
+          style="max-width: 100%; height: auto"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+
+    <br />
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <h2>About Us</h2>
+            <p>
+              Smart Eye is a leading provider of information technology,
+              consulting, and business process services. Our dedicated employees
+              offer strategic insights, technological expertise, and industry
+              experience.
+            </p>
+            <p>
+              We focus on technologies that promise to reduce costs, streamline
+              processes, and speed time-to-market, backed by our strong quality
+              processes and rich experience managing global projects.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-12 map-img">
+            <h2>Contact Us</h2>
+            <address class="md-margin-bottom-40">
+              BlueDart <br />
+              Marthandam (K.K District) <br />
+              Tamil Nadu, IND <br />
+              Phone: +91 9159669599 <br />
+              Email: <a href="mailto:info@bluedart.in">info@bluedart.in</a
+              ><br />
+              Web: <a href="http://www.bluedart.in">www.bluedart.in</a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copy">
+      <div class="container">
+        <footer class="bg-primary text-center text-white py-4 mt-5">
+          <p>&copy; 2024 Breast Cancer Detection. All rights reserved.</p>
+        </footer>
+
+        <span>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </span>
+      </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
