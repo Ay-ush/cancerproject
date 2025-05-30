@@ -1,0 +1,7 @@
+create virtual env ==> py -m venv venv
+venv\Scripts\activate.bat
+pip --version
+pip install django-bootstrap-v5
+pip install opencv-python
+pip install tensorflow
+python manage.py runserver
